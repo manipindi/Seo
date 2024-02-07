@@ -1,9 +1,9 @@
+import Head from "next/head";
 import React from "react";
-import { Helmet } from "react-helmet-async";
 
 const SEO = () => {
   return (
-    <Helmet>
+    <Head>
       <title>Learning React Helmtet!</title>
       <meta
         name="description"
@@ -25,7 +25,7 @@ const SEO = () => {
       <meta name="twitter:card" content={"article"} />
       <meta name="twitter:title" content={"Learning React Helmet!"} />
       <meta name="twitter:description" content={"Beginner friendly page for learning React Helmet."} />
-    </Helmet>
+    </Head>
   );
 };
 
