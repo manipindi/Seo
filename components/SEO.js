@@ -11,7 +11,7 @@ const SEO = () => {
       />
       <meta
         property="og:title"
-        content="How to Become an SEO Expert (8 Steps)"
+        content="How to Become an SEO Expert (8 Steps) How to Become an SEO Expert (8 Steps)"
       />
       <meta
         property="og:description"
