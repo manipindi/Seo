@@ -15,8 +15,18 @@ export default function Home() {
           name="description"
           content="Beginner friendly page for learning React Helmet."
         />
-        <meta property="og:image" content="https://plus.unsplash.com/premium_photo-1673306778968-5aab577a7365?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
-        <meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />
+        <meta
+          property="og:title"
+          content="How to Become an SEO Expert (8 Steps)"
+        />
+        <meta
+          property="og:description"
+          content="Get from SEO newbie to SEO pro in 8 simple steps."
+        />
+        <meta
+          property="og:image"
+          content="https://ahrefs.com/blog/wp-content/uploads/2019/12/fb-how-to-become-an-seo-expert.png"
+        />
       </Helmet>
       helo
     </div>
