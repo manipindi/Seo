@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <div>
-      <Helmet>
+      <Head>
         <title>Learning React Helmet!</title>
         <meta
           name="description"
@@ -27,7 +27,7 @@ export default function Home() {
           property="og:image"
           content="https://ahrefs.com/blog/wp-content/uploads/2019/12/fb-how-to-become-an-seo-expert.png"
         />
-      </Helmet>
+      </Head>
       helo
     </div>
   );
