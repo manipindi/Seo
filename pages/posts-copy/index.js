@@ -1,5 +1,5 @@
 import Head from "next/head";
-import SEO from "../../components/SEO";
+import SeoHead from "../../components/SeoHead";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
@@ -13,7 +13,7 @@ const Posts = () => {
 
   return (
     <div>
-      <SEO
+      <SeoHead
         title={`Posts: ${posts.length}`}
         description={"A perfect place to explore the posts"}
         image={
