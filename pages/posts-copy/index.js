@@ -16,7 +16,7 @@ const Posts = () => {
     <WithHeaderLayout heading={"Posts Copy"} subtitle={"Discover More Photos"}>
       <SeoHead
         title={`Posts Copy`}
-        description={"A perfect place to explore the posts"}
+        description={"A perfect place to explore the posts copy place"}
         image={
           "https://images.hindustantimes.com/tech/img/2023/09/21/1600x900/fb_1695273515215_1695273522698.jpg"
         }
