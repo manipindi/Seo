@@ -1,30 +1,27 @@
 import Head from "next/head";
 import React from "react";
 
-const SEO = () => {
+const SEO = ({ description, name, type, title, image }) => {
   return (
     <Head>
-      <title>Learning React Helmtet!</title>
-      <meta
-        name="description"
-        content="Beginner friendly page for learning React Helmet."
-      />
-      <meta
-        property="og:title"
-        content="How to Become an SEO Expert (8 Steps) How to Become an SEO Expert (8 Steps)"
-      />
-      <meta
-        property="og:description"
-        content="Get from SEO newbie to SEO pro in 8 simple steps."
-      />
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      {/* Facebook tags */}
+      <meta property="og:type" content={type} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
       <meta
         property="og:image"
-        content="https://ahrefs.com/blog/wp-content/uploads/2019/12/fb-how-to-become-an-seo-expert.png"
+        content={
+          image ||
+          "https://narayanaiasacademy.com/wp-content/uploads/2022/03/narayanalogo.png"
+        }
       />
-      <meta name="twitter:creator" content={"Company name."} />
-      <meta name="twitter:card" content={"article"} />
-      <meta name="twitter:title" content={"Learning React Helmet!"} />
-      <meta name="twitter:description" content={"Beginner friendly page for learning React Helmet."} />
+      {/* Twitter tags */}
+      <meta name="twitter:creator" content={name} />
+      <meta name="twitter:card" content={type} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
     </Head>
   );
 };
