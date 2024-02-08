@@ -2,6 +2,7 @@ import Head from "next/head";
 import SeoHead from "../../components/SeoHead";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { WithHeaderLayout } from "../../components/Layout";
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);
@@ -12,9 +13,9 @@ const Posts = () => {
   }, []);
 
   return (
-    <div>
+    <WithHeaderLayout heading={"Posts Copy"} subtitle={"Discover More Photos"}>
       <SeoHead
-        title={`Posts: ${posts.length}`}
+        title={`Posts Copy`}
         description={"A perfect place to explore the posts"}
         image={
           "https://mms.businesswire.com/media/20190731005310/en/735774/4/Post-it-Brand_Logo_CMYK_webready.jpg"
@@ -29,7 +30,7 @@ const Posts = () => {
             <Link href={`posts/${post.id}`}>{post.title}</Link>
           </div>
         ))}
-    </div>
+    </WithHeaderLayout>
   );
 };
 

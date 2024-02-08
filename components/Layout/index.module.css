@@ -1,0 +1,42 @@
+/* .with_header_wrapper{
+
+} */
+
+.header_wrapper{
+    height: 320px;
+    background-color: #12144A;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+}
+.children_wrapper{
+    padding: 16px;
+}
+
+.heading{
+    align-self: stretch;
+    flex-grow: 0;
+    font-family: Noto Serif;
+    font-size: 42px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+}
+.subtitle{
+    align-self: stretch;
+    flex-grow: 0;
+    font-family: Noto Serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+}
