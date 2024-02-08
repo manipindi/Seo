@@ -14,7 +14,7 @@ const Posts = () => {
   return (
     <div>
       <SEO
-        title={"Posts: Check out the latest posts"}
+        title={`Posts: ${posts.length}`}
         description={"A perfect place to explore the posts"}
         image={
           "https://mms.businesswire.com/media/20190731005310/en/735774/4/Post-it-Brand_Logo_CMYK_webready.jpg"

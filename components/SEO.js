@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 
 const SEO = ({ description, name, type, title, image }) => {
   return (
-    <Helmet>
+    <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
       {/* Facebook tags */}
@@ -23,7 +23,7 @@ const SEO = ({ description, name, type, title, image }) => {
       <meta name="twitter:card" content={type} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-    </Helmet>
+    </Head>
   );
 };
 
