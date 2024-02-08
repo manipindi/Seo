@@ -18,7 +18,7 @@ const Posts = () => {
         title={`Posts Copy`}
         description={"A perfect place to explore the posts copy place"}
         image={
-          "https://images.hindustantimes.com/tech/img/2023/09/21/1600x900/fb_1695273515215_1695273522698.jpg"
+          "https://static.dezeen.com/uploads/2023/07/x-logo-twitter-elon-musk_dezeen_2364_col_0-1.jpg"
         }
         name={"Posts Page"}
         type="posts"
