@@ -2,6 +2,7 @@ import Head from "next/head";
 import SEO from "../../components/SEO";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Post = () => {
   const router = useRouter();
@@ -15,15 +16,13 @@ const Post = () => {
   }, [router.query]);
   return (
     <div>
-      <Head>
-        <SEO
-          title={`Post: ${postData?.title}`}
-          description={"A perfect place to explore the posts"}
-          image={postData?.thumbnailUrl}
-          name={postData?.title}
-          type="post"
-        />
-      </Head>
+      <SEO
+        title={`Post: ${postData?.title}`}
+        description={"A perfect place to explore the posts"}
+        image={postData?.thumbnailUrl}
+        name={postData?.title}
+        type="post"
+      />
       {!!Object.keys(postData)?.length && (
         <div>
           <img src={postData.thumbnailUrl} alt="" />
