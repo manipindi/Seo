@@ -11,6 +11,17 @@ const Posts = () => {
       .then((json) => setPosts(json.slice(0, 100)));
   }, []);
 
+  useEffect(() => {
+    // This effect will run after the component mounts
+    // You can use it to dynamically update head tags
+    // For example, dynamically changing the title after component mounts
+    document.title = `Postssss : ${posts.length}`;
+
+    // Return a cleanup function if necessary
+    return () => {
+      // Cleanup logic if needed
+    };
+  }, [posts.length]);
   return (
     <div>
       <SEO
