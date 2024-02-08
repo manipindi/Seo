@@ -7,7 +7,7 @@ const Posts = () => {
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/photos")
       .then((response) => response.json())
-      .then((json) => setPosts(json));
+      .then((json) => setPosts(json.slice(0,100)));
   }, []);
 
   return (
