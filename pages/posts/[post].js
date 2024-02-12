@@ -5,7 +5,7 @@ import React from "react";
 import SeoHead from "../../components/SeoHead";
 
 const Post = ({ postData }) => {
-
+console.log(postData, "postData");
   return (
     <div>
       <SeoHead

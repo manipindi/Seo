@@ -5,9 +5,11 @@ import React, { useEffect, useState } from "react";
 import { WithHeaderLayout } from "../../components/Layout";
 import { usePhotos } from "../../domain/photos";
 import SeoHead from "../../components/SeoHead";
+import { useRouter } from "next/router";
 
 const Posts = () => {
-  const { photos, isLoading, isError } = usePhotos()
+  const { photos, isLoading, isError } = usePhotos();
+  const router = useRouter();
 
   return (
     <WithHeaderLayout heading={"Posts"} subtitle={"Discover More Photos"}>
@@ -21,10 +23,16 @@ const Posts = () => {
         type="posts"
       />
       {!!photos?.length &&
-        photos.slice(0,100).map((post, idx) => (
+        photos.slice(0, 100).map((post, idx) => (
           <div key={idx}>
             <img src={post.thumbnailUrl} alt="" />
-            <Link href={`posts/${post.id}`}>{post.title}</Link>
+            <p
+              onClick={() => {
+                router.push(`posts/${post.id}`);
+              }}
+            >
+              {post.title}
+            </p>
           </div>
         ))}
     </WithHeaderLayout>
