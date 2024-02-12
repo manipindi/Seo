@@ -4,8 +4,8 @@ import { useRouter } from "next/router";
 import React from "react";
 import SeoHead from "../../components/SeoHead";
 
-const Post = ({ postData }) => {
-console.log(postData, "postData");
+export default function Post({ postData }) {
+  console.log(postData, "postData");
   return (
     <div>
       <SeoHead
@@ -23,9 +23,7 @@ console.log(postData, "postData");
       )}
     </div>
   );
-};
-
-export default Post;
+}
 
 export const getStaticPaths = async () => {
   return {
