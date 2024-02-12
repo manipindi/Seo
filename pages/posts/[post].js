@@ -1,22 +1,14 @@
 import Head from "next/head";
 import SEO from "../../components/SEO";
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
-import { Helmet } from "react-helmet-async";
+import React from "react";
+import SeoHead from "../../components/SeoHead";
 
-const Post = () => {
-  const router = useRouter();
-  const [postData, setData] = useState({});
-  useEffect(() => {
-    if (router.query?.post) {
-      fetch(`https://jsonplaceholder.typicode.com/photos/${router.query.post}`)
-        .then((response) => response.json())
-        .then((json) => setData(json));
-    }
-  }, [router.query]);
+const Post = ({ postData }) => {
+
   return (
     <div>
-      <SEO
+      <SeoHead
         title={`Post: ${postData?.title}`}
         description={"A perfect place to explore the posts"}
         image={postData?.thumbnailUrl}
@@ -34,3 +26,25 @@ const Post = () => {
 };
 
 export default Post;
+
+export const getStaticPaths = async () => {
+  return {
+    paths: [],
+    fallback: "blocking",
+  };
+};
+
+export const getStaticProps = async ({ params }) => {
+  const post = params?.post;
+  console.log(post, "post");
+  const response = await fetch(
+    `https://jsonplaceholder.typicode.com/photos/${post}`
+  );
+  const postResponseData = await response.json();
+
+  return {
+    props: {
+      postData: postResponseData,
+    },
+  };
+};
