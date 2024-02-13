@@ -5,7 +5,6 @@ import React from "react";
 import SeoHead from "../../components/SeoHead";
 
 export default function Post({ postData }) {
-  console.log(postData, "postData");
   return (
     <div>
       <SeoHead
@@ -28,13 +27,12 @@ export default function Post({ postData }) {
 export const getStaticPaths = async () => {
   return {
     paths: [],
-    fallback: true,
+    fallback: "blocking",
   };
 };
 
 export const getStaticProps = async ({ params }) => {
   const post = params?.post;
-  console.log(post, "post");
   const response = await fetch(
     `https://jsonplaceholder.typicode.com/photos/${post}`
   );
