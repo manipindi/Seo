@@ -5,6 +5,11 @@ import React from "react";
 import SeoHead from "../../components/SeoHead";
 
 export default function Post({ postData }) {
+  const router = useRouter();
+  console.log(router, "router");
+  if (router.isFallback) {
+    return <div>Loading ........</div>;
+  }
   return (
     <div>
       <SeoHead
@@ -27,7 +32,7 @@ export default function Post({ postData }) {
 export const getStaticPaths = async () => {
   return {
     paths: [],
-    fallback: "blocking",
+    fallback: true,
   };
 };
 
