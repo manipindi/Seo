@@ -32,7 +32,7 @@ export default function Post({ postData }) {
 export const getStaticPaths = async () => {
   return {
     paths: [],
-    fallback: true,
+    fallback: "blocking",
   };
 };
 
